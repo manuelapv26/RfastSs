@@ -1,0 +1,60 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: flex-end; /* Alinea los elementos al final (parte inferior) */
+    background: linear-gradient(to right, #99a3be, #34487d);
+    padding: 60px 20px 20px;  
+    border-radius: 15px;
+    margin-bottom: 20px;
+    position: relative; 
+    height: 190px;
+}
+
+.profile-name {
+    display: flex;
+    align-items: flex-end; /* Asegúrate de que el texto se alinee al final */
+    font-size: 2rem; /* Tamaño de la fuente */
+    font-weight: bold;
+    color: #ebebeb;
+    margin-left: 200px; /* Asegúrate de que hay espacio suficiente para la imagen */
+}
+
+
+.imgUser {
+    width: 200px; 
+    height: 200px;
+    position: absolute;  
+    bottom: -60px;  
+    left: 20px;  
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-top: 60px;
+}
+
+.tab {
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    transition: border-bottom 0.2s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for tabs */
+.tab:hover {
+    border-bottom: 3px solid #1e3a8a;  /* Color del borde inferior en hover */
+    color: #1e3a8a;  /* Color de texto en hover */
+}
+
+/* Active tab state */
+.tab.selected, .tab.selected:hover {
+    border-bottom: 3px solid #1e3a8a;  /* Color del borde inferior para la pestaña seleccionada */
+    color: #1e3a8a;  /* Color de texto */
+}

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { FeatureLoginComponent } from './features/feature-login/feature-login.component';
 import { FeatureLoginModule } from './features/feature-login/feature-login.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { FeatureLoginModule } from './features/feature-login/feature-login.modul
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FeatureLoginModule
+    FeatureLoginModule,
+    ReactiveFormsModule, 
+    RecaptchaModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

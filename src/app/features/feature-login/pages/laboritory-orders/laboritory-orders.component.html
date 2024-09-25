@@ -1,0 +1,40 @@
+<div>
+    <app-user-profile></app-user-profile>
+    <div class="container">
+      <div class="inputs">
+        <input type="text" placeholder="Número de la orden" [(ngModel)]="filtro.numeroOrden">
+        <input type="date" placeholder="Fecha inicial" [(ngModel)]="filtro.fechaInicio">
+        <input type="date" placeholder="Fecha final" [(ngModel)]="filtro.fechaFinal">
+      </div>
+  
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha de la orden</th>
+            <th>Nombre de la orden</th>
+            <th>Número de la orden</th>
+            <th>Ver más</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let orden of ordenesFiltradas()">
+            <td>{{ orden.fechaOrden }}</td>
+            <td>{{ orden.nombreOrden }}</td>
+            <td>{{ orden.numeroOrden }}</td>
+            <td class="icon-cell">
+              <span class="eye-icon" (click)="openModal(orden)">
+                <img src="../../../../../assets/images/vista.png" alt="Ver más">
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- Modal component -->
+      <app-modal-details 
+        [isOpen]="isOpen" 
+        (close)="closeModal()" 
+        [orderDetails]="selectedOrder">
+      </app-modal-details>
+    </div>
+</div>

@@ -1,8 +1,6 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
   }
   
   .header {
@@ -52,23 +50,23 @@
   .images {
     position: relative;
     display: flex;
-    justify-content: flex-start; /* Alinea las imágenes a la izquierda */
+    justify-content: flex-start; 
   }
   
   .images .img1 {
     margin-top: 30px;
-    position: absolute; /* Para que quede encima de la otra imagen */
-    z-index: 2; /* Le da prioridad sobre la img2 */
+    position: absolute; 
+    z-index: 2; 
     border-radius: 50%;
     object-fit: cover;
   }
   
   .images .img2 {
-    position: relative; /* Mantén la img2 en su posición */
-    margin-left: 170px; /* Desplaza hacia la derecha para que img1 quede encima parcialmente */
+    position: relative; 
+    margin-left: 170px; 
     padding-top: 60px;
-    width: 260px; /* Aumenta el tamaño de la imagen */
-    height: 260px; /* Mantiene las proporciones */
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -129,4 +127,11 @@
     height: auto;
     display: block;
   }
-  
+  @keyframes moveImage {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100px); } /* Ajusta la distancia según lo necesites */
+}
+
+.illustration img {
+    animation: moveImage 5s linear infinite alternate; /* Ajusta la duración y el easing según lo necesites */
+}

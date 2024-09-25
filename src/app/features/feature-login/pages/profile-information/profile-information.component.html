@@ -1,0 +1,53 @@
+<div>
+    <app-user-profile></app-user-profile>
+    <div class="container">
+        <div class="form-row">
+            <div class="column">
+                <label for="fullName">Nombre completo</label>
+                <div id="fullName" class="input-text" onclick="showWarning()">Juan Pérez</div>
+            </div>
+            <div class="column">
+                <label for="documentType">Tipo de documento</label>
+                <div id="documentType" class="input-text" onclick="showWarning()">Cédula de ciudadanía</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="column">
+                <label for="documentNumber">Número de documento</label>
+                <div id="documentNumber" class="input-text" onclick="showWarning()">123456789</div>
+            </div>
+            <div class="column">
+                <label for="birthDate">Fecha de nacimiento</label>
+                <div id="birthDate" class="input-text" onclick="showWarning()">12/06/1990</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="column">
+                <label for="biologicalSex">Sexo biológico</label>
+                <div id="biologicalSex" class="input-text" onclick="showWarning()">Masculino</div>
+            </div>
+            <div class="column">
+                <label for="address">Dirección</label>
+                <div id="address" class="input-text" onclick="showWarning()">Calle 123 #45-67</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="column">
+                <label for="cellNumber">Número de celular</label>
+                <div id="cellNumber" class="input-text" onclick="showWarning()">3123456789</div>
+            </div>
+            <div class="column">
+                <label for="email">Correo electrónico</label>
+                <div id="email" class="input-text" onclick="showWarning()">juan.perez&#64;email.com</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="warning-message" class="warning-message" style="display: none;">
+    <p>No tienes permiso para editar esta información.</p>
+    <button onclick="closeWarning()">Cerrar</button>
+</div>

@@ -54,17 +54,18 @@ select {
 
 .extra-options {
     display: flex;
-    align-items: center; /* Alinea verticalmente el checkbox y el texto */
+    align-items: center; 
     margin-bottom: 20px;
 }
 
 .rememberMe {
     display: flex;
-    align-items: center; /* Alinea el checkbox y el texto */
+    align-items: center; 
+    margin-left: 10px;
 }
 
 .rememberMe input {
-    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+    margin-right: 10px; 
 }
 
 .button {
@@ -86,4 +87,31 @@ select {
 .welcome-container img {
     max-width: 100%;
     border-radius: 15px;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #011A5D; 
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #011A5D; 
+    border-color: #011A5D; 
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔'; 
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el chulo */
 }

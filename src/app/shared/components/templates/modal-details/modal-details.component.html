@@ -1,0 +1,77 @@
+<div class="modal" [ngStyle]="{'display': isOpen ? 'block' : 'none'}">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" (click)="closeModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="infopart1">
+                <div>
+                    <img src="../../../../../assets/images/buscar.png" alt="Buscar">
+                </div>
+                <div>
+                    <h2>Detalles de la orden</h2>
+                    <p>En esta sección, podrás encontrar el detalle de tu orden y ver los resultados correspondientes. Revisa cada elemento para asegurarte de que toda la información esté correcta.</p>
+                </div>
+            </div>
+            <div class="infopart2" *ngIf="orderDetails">
+                <div class="info-item">
+                    <strong>Nombre de la orden:</strong>
+                    <p class="info-value">{{ orderDetails.nombreOrden }}</p>
+                </div>
+                <div class="info-item">
+                    <strong>Número de la orden:</strong>
+                    <p class="info-value">{{ orderDetails.numeroOrden }}</p>
+                </div>
+                <div class="info-item">
+                    <strong>Fecha orden:</strong>
+                    <p class="info-value">{{ orderDetails.fechaOrden }}</p>
+                </div>
+                <!-- Include any additional details here -->
+                <div class="info-item">
+                    <strong>Paciente:</strong>
+                    <p class="info-value">manuela</p>
+                </div>
+                <div class="info-item">
+                    <strong>Identificación:</strong>
+                    <p class="info-value">1099828712</p>
+                </div>
+                <div class="info-item">
+                    <strong>Sexo / Edad:</strong>
+                    <p class="info-value">Femenino / 18</p>
+                </div>
+                <div class="info-item">
+                    <strong>Administradora Salud:</strong>
+                    <p class="info-value">Conpensar</p>
+                </div>
+                <div class="info-item">
+                    <strong>Teléfono:</strong>
+                    <p class="info-value">312233414</p>
+                </div>
+                <div class="info-item">
+                    <strong>Médico:</strong>
+                    <p class="info-value">Juan Pérez</p>
+                </div>
+                <div class="info-item">
+                    <strong>Código de la prueba:</strong>
+                    <p class="info-value">123</p>
+                </div>
+                <div class="info-item">
+                    <strong>Nombre de la prueba:</strong>
+                    <p class="info-value">Embarazo</p>
+                </div>
+                <div class="info-item">
+                    <strong>Resultado:</strong>
+                    <p class="info-value">Negativo</p>
+                </div>
+                <div class="info-item">
+                    <strong>Valores de referencia:</strong>
+                    <p class="info-value">233221</p>
+                </div>
+                <div class="info-item">
+                    <strong>Unidad:</strong>
+                    <p class="info-value">----------</p>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
