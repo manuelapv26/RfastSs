@@ -1,0 +1,89 @@
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    width: 900px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: auto;
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #011A5D;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 12px;
+}
+
+input, select {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #495057;
+    background-color: transparent;
+}
+
+select {
+    cursor: pointer;
+}
+
+.extra-options {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el checkbox y el texto */
+    margin-bottom: 20px;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center; /* Alinea el checkbox y el texto */
+}
+
+.rememberMe input {
+    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-container {
+    flex: 1;
+    background: linear-gradient(135deg, #011A5D 0%, #010D3A 100%);
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-container img {
+    max-width: 100%;
+    border-radius: 15px;
+}

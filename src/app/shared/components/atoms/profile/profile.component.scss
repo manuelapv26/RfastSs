@@ -1,0 +1,22 @@
+.profile-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px 5px 10px;
+    background-color: transparent;
+    border: none; /* Eliminar todos los bordes */
+    border-bottom: 3px solid #011A5D; /* Solo borde inferior */
+    border-radius: 0; /* Eliminar cualquier borde redondeado */
+    font-size: 14px;
+    cursor: pointer;
+    gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.profile-button img {
+    width: 30px; /* Ajusta el tamaño de la imagen si es necesario */
+    height: 30px;
+}
+
+.userName {
+    margin-left: 5px; /* Opcional: ajusta la separación entre el texto y la imagen */
+}
