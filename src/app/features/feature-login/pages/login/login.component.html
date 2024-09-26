@@ -1,56 +1,59 @@
 <div class="outer-container">
-    <div class="login-container">
-      <div class="form-container">
-        <h2>Inicia sesión</h2>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-          <div class="input-group">
-            <select formControlName="documentType" required>
-              <option value="" disabled selected>Seleccione tipo de documento</option>
-              <option value="tarjeta_identidad">Tarjeta de Identidad</option>
-              <option value="cedula_ciudadania">Cédula de Ciudadanía</option>
-              <option value="cedula_extranjeria">Cédula de Extranjería</option>
-              <option value="registro_civil">Registro Civil</option>
-              <option value="pasaporte">Pasaporte</option>
-              <option value="adulto_sin_identificacion">Adulto sin Identificación</option>
-              <option value="menor_sin_identificacion">Menor sin Identificación</option>
-              <option value="numero_unico_identificacion">Número Único de Identificación</option>
-              <option value="certificado_nacido_vivo">Certificado de Nacido Vivo</option>
-              <option value="salvo_conducto">Salvo Conducto</option>
-              <option value="nit">NIT</option>
-              <option value="carnet_diplomatico">Carnet Diplomático</option>
-              <option value="permiso_especial_permanencia">Permiso Especial de Permanencia</option>
-              <option value="residente_especial_paz">Residente Especial para la Paz</option>
-              <option value="permiso_proteccion_temporal">Permiso por Protección Temporal</option>
-              <option value="documento_extranjero">Documento de Extranjero</option>
-            </select>
-          </div>
-  
-          <div class="input-group">
-            <input type="text" placeholder="Número de documento" formControlName="documentNumber" required />
-          </div>
-  
-          <div class="input-group">
-            <input type="date" formControlName="birthdate" required />
-          </div>
-  
-          <div class="extra-options">
-            <label class="rememberMe">
-              <input type="checkbox">
-              <span>Recuérdame</span>
-            </label>
-          </div>
-  
-          <div class="button">
-            <app-button type="submit" label="Ingresar"></app-button>
-          </div>
-  
-          <!-- reCAPTCHA -->
-          <re-captcha (resolved)="onRecaptchaResolved($event)" siteKey="6LfLHU8qAAAAAKlFaMy3iYbGFDK0XqVkB40Y2p6g"></re-captcha>
-        </form>
-      </div>
-      <div class="welcome-container">
-        <img src="../../../../../assets/images/image-removebg-preview 1.png" alt="Imagen de Bienvenida">
-      </div>
+  <div class="login-container">
+    <div class="form-container">
+      <h2>Inicia sesión</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <select formControlName="documentType" required>
+            <option value="" disabled selected>Seleccione tipo de documento</option>
+            <option value="tarjeta_identidad">Tarjeta de Identidad</option>
+            <option value="cedula_ciudadania">Cédula de Ciudadanía</option>
+            <option value="cedula_extranjeria">Cédula de Extranjería</option>
+            <option value="registro_civil">Registro civil</option>
+            <option value="pasaporte">Pasaporte</option>
+            <option value="adulto_sin_identificacion">Adulto sin Identificación</option>
+            <option value="menor_sin_identificacion">Menor sin Identificación</option>
+            <option value="numero_unico_identificacion">Número Único de Identificación</option>
+            <option value="certificado_nacido_vivo">Certificado de Nacido Vivo</option>
+            <option value="salvo_conducto">Salvo Conducto</option>
+            <option value="nit">NIT</option>
+            <option value="carnet_diplomatico">Carnet Diplomático</option>
+            <option value="permiso_especial_permanencia">Permiso Especial de Permanencia</option>
+            <option value="residente_especial_paz">Residente Especial para la Paz</option>
+            <option value="permiso_proteccion_temporal">Permiso por Protección Temporal</option>
+            <option value="documento_extranjero">Documento de Extranjero</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <input type="text" placeholder="Número de documento" formControlName="documentNumber" required />
+        </div>
+
+        <div class="input-group">
+          <input type="date" formControlName="birthdate" required />
+        </div>
+
+        <div class="extra-options">
+          <label class="rememberMe">
+            <input type="checkbox">
+            <span>Recuérdame</span>
+          </label>
+        </div>
+
+        <div class="button">
+          <app-button type="submit" label="Ingresar"></app-button>
+        </div>
+
+        <!-- Mensajes de error debajo del botón -->
+        <div *ngIf="loginForm.invalid && loginForm.touched" class="error-messages">
+          <div *ngIf="loginForm.get('documentType')?.errors?.['required']">El tipo de documento es requerido</div>
+          <div *ngIf="loginForm.get('documentNumber')?.errors?.['required']">El número de documento es requerido</div>
+          <div *ngIf="loginForm.get('birthdate')?.errors?.['required']">La fecha de nacimiento es requerida</div>
+        </div>
+      </form>
+    </div>
+    <div class="welcome-container">
+      <img src="../../../../../assets/images/image-removebg-preview 1.png" alt="Imagen de Bienvenida">
     </div>
   </div>
-  
+</div>

@@ -7,7 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { FeatureLoginComponent } from './features/feature-login/feature-login.component';
 import { FeatureLoginModule } from './features/feature-login/feature-login.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RecaptchaModule } from 'ng-recaptcha';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
     SharedModule,
     FeatureLoginModule,
     ReactiveFormsModule, 
-    RecaptchaModule
+    HttpClientModule
     
   ],
   providers: [],
